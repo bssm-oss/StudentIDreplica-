@@ -81,6 +81,7 @@ class HomeViewModel @Inject constructor(
             nfcState.value = NfcState.Error("태그 정보를 찾지 못했습니다.")
             return
         }
+        deviceState.update { it.copy(readArmed = false) }
         viewModelScope.launch {
             runCatching {
                 val tagInfo = nfcReaderHelper.extractPublicMetadata(
@@ -92,7 +93,6 @@ class HomeViewModel @Inject constructor(
             }.onFailure {
                 nfcState.value = NfcState.Error(it.message ?: "태그 정보를 읽지 못했습니다.")
             }
-            deviceState.update { it.copy(readArmed = false) }
         }
     }
 
