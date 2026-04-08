@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">학생증 레플리카 (분석기)</string>
+    <string name="home_title">학생증 레플리카 (분석기)</string>
+    <string name="read_tag">태그 읽기</string>
+    <string name="saved_records">저장된 기록</string>
+    <string name="history_title">저장된 기록</string>
+    <string name="detail_title">세부 정보</string>
+    <string name="share_report">분석 보고서 공유</string>
+    <string name="consent_title">경고: 개인 소유 카드 분석만 허용됩니다.</string>
+    <string name="consent_body">본 앱은 교육 및 개인 소유의 태그 정보 확인 목적으로만 사용해야 합니다. 타인의 신분증, 교통카드, 출입 카드를 무단으로 읽거나 복제를 시도하는 것은 불법입니다. 본 앱에는 인증 키 추측, 데이터 덤프, 복제 카드 쓰기 기능이 의도적으로 포함되어 있지 않습니다. 사용자는 관련 법규를 준수할 책임이 있습니다.</string>
+    <string name="consent_confirm">동의함</string>
+    <string name="nfc_supported">이 기기는 NFC를 지원합니다.</string>
+    <string name="nfc_disabled">NFC가 꺼져 있습니다. 시스템 설정에서 NFC를 켜 주세요.</string>
+    <string name="nfc_unsupported">이 기기는 NFC를 지원하지 않습니다.</string>
+    <string name="nfc_idle">태그 읽기 버튼을 누른 뒤 카드를 기기 뒷면에 가까이 대세요.</string>
+    <string name="nfc_reading">공개 메타데이터를 읽는 중입니다. 개인 소유 태그만 스캔하세요.</string>
+    <string name="nfc_success">공개 메타데이터를 읽고 저장했습니다.</string>
+    <string name="nfc_error">태그 정보를 읽지 못했습니다.</string>
+    <string name="last_scan_title">마지막 분석 결과</string>
+    <string name="latest_scan_empty">아직 읽은 태그가 없습니다.</string>
+    <string name="uid_label">UID</string>
+    <string name="tag_type_label">태그 유형</string>
+    <string name="tech_list_label">기술 목록</string>
+    <string name="atqa_label">ATQA</string>
+    <string name="sak_label">SAK</string>
+    <string name="scanned_at_label">읽은 시각</string>
+    <string name="label_label">메모</string>
+    <string name="label_empty">메모 없음</string>
+    <string name="empty_history">저장된 기록이 없습니다.</string>
+    <string name="safety_notice">이 앱은 공개 메타데이터만 읽으며 인증, 덤프, 복제, 쓰기를 수행하지 않습니다.</string>
+    <string name="report_share_chooser">분석 보고서 공유</string>
+    <string name="report_description_classic">MIFARE Classic 1K 호환 태그로 추정됩니다.</string>
+    <string name="report_description_generic">NFC-A 호환 태그로 추정됩니다.</string>
+</resources>
