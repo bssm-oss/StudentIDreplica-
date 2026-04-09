@@ -9,6 +9,7 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
@@ -45,7 +46,7 @@ class HomeViewModel @Inject constructor(
         )
     }.stateIn(
         scope = viewModelScope,
-        started = kotlinx.coroutines.flow.SharingStarted.WhileSubscribed(5_000),
+        started = SharingStarted.Eagerly,
         initialValue = HomeUiState()
     )
 
@@ -81,6 +82,10 @@ class HomeViewModel @Inject constructor(
             nfcState.value = NfcState.Error("태그 정보를 찾지 못했습니다.")
             return
         }
+        handleDiscoveredTag(tag)
+    }
+
+    internal fun handleDiscoveredTag(tag: Tag) {
         deviceState.update { it.copy(readArmed = false) }
         viewModelScope.launch {
             runCatching {
